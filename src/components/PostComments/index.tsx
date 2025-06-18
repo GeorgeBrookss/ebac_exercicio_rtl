@@ -1,6 +1,5 @@
 import { FormEvent, useState } from 'react';
 import styles from './PostComments.module.css';
-
 import Comment from '../../models/Comment';
 
 const Post = () => {
@@ -16,7 +15,7 @@ const Post = () => {
 
     return (
         <div>
-            <ul className={styles['post-comments']}>
+            <ul data-testid="comentario" className={styles['post-comments']}>
                 {comments.map(({ comment, id }) => (
                     <li className={styles['post-comment']} key={id}>
                         <p className={styles['post-comment-content']}>
